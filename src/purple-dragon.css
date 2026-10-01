@@ -1,0 +1,4 @@
+.dragon-selection .dragon-choice{max-width:900px;grid-template-columns:repeat(6,minmax(0,1fr))}
+.choice-dragon.purple{color:#c99af5}
+.symbol.purple{background:linear-gradient(145deg,#4b2c68,#251b32);color:#d9b5ff}
+@media(max-width:680px){.dragon-selection .dragon-choice{grid-template-columns:repeat(3,minmax(0,1fr))}}

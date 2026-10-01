@@ -1,7 +1,7 @@
-export type SymbolId = 'yellow' | 'blue' | 'black' | 'red' | 'white' | 'scatter' | 'vermillion' | 'tortoise' | 'koi' | 'redpacket' | 'coin' | '10' | 'J' | 'Q' | 'A' | 'K';
+export type SymbolId = 'yellow' | 'blue' | 'black' | 'red' | 'white' | 'purple' | 'scatter' | 'vermillion' | 'tortoise' | 'koi' | 'redpacket' | 'coin' | '10' | 'J' | 'Q' | 'A' | 'K';
 
 export type SymbolConfig = { id: SymbolId; label: string; glyph: string; tone: string; payouts: Partial<Record<3 | 4 | 5, number>> };
-export const DRAGON_SYMBOLS: SymbolId[] = ['yellow', 'blue', 'black', 'red', 'white'];
+export const DRAGON_SYMBOLS: SymbolId[] = ['yellow', 'blue', 'black', 'red', 'white', 'purple'];
 export const SCATTER_PITY_START = 180;
 export const SCATTER_PITY_GUARANTEE_SPIN = 260;
 
@@ -16,7 +16,7 @@ const BASE_REEL_STRIP: SymbolId[] = [
   'koi', 'koi', 'koi', 'koi',
   'tortoise', 'tortoise', 'tortoise',
   'vermillion', 'vermillion',
-  'yellow', 'blue', 'black', 'red', 'white', 'scatter'
+  'yellow', 'blue', 'black', 'red', 'white', 'purple', 'scatter'
 ];
 
 export const REEL_STRIP: SymbolId[] = [
@@ -44,7 +44,8 @@ export const DRAGONS = [
   { id: 'blue', label: '蓝龙', glyph: '🐉', tone: 'blue', spins: 8, multipliers: [8, 10, 15] },
   { id: 'black', label: '黑龙', glyph: '🐉', tone: 'black', spins: 10, multipliers: [5, 8, 10] },
   { id: 'red', label: '红龙', glyph: '🐉', tone: 'red', spins: 15, multipliers: [3, 5, 8] },
-  { id: 'white', label: '白龙', glyph: '🐉', tone: 'white', spins: 20, multipliers: [2, 3, 5] }
+  { id: 'white', label: '白龙', glyph: '🐉', tone: 'white', spins: 20, multipliers: [2, 3, 5] },
+  { id: 'purple', label: '紫龙', glyph: '🐉', tone: 'purple', spins: 0, multipliers: [] }
 ] as const;
 
 export const GAME_CONFIG = {
@@ -58,6 +59,7 @@ export const GAME_CONFIG = {
     { id: 'black', label: '黑龙', glyph: '🐉', tone: 'black', payouts: {} },
     { id: 'red', label: '红龙', glyph: '🐉', tone: 'red', payouts: {} },
     { id: 'white', label: '白龙', glyph: '🐉', tone: 'white', payouts: {} },
+    { id: 'purple', label: '紫龙', glyph: '🐉', tone: 'purple', payouts: {} },
     { id: 'scatter', label: '龙珠 Scatter', glyph: '◈', tone: 'purple', payouts: {} },
     { id: 'vermillion', label: '朱雀', glyph: '🦅', tone: 'vermillion', payouts: { 3: 0.33, 4: 0.33, 5: 0.66 } },
     { id: 'tortoise', label: '玄武', glyph: '🐢', tone: 'tortoise', payouts: { 3: 0.33, 4: 0.66, 5: 0.66 } },
